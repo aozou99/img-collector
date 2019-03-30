@@ -8,7 +8,7 @@
     "watch": "webpack -w --config webpack.dev.js"
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts": [
       "eslint --fix",
       "prettier --write",
       "git add"
