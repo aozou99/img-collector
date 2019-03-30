@@ -5,14 +5,19 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "watch": "webpack -w --config webpack.dev.js",
-    "precommit": "lint-staged"
+    "watch": "webpack -w --config webpack.dev.js"
   },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
+      "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "author": "Joe Martella",
   "license": "MIT",
