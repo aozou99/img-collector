@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
 
-    "name": "Chrome Extension (built with TypeScript + React)",
+    "name": "Image Collector",
     "description":
-        "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
+        "現在開いているWepページで使用されている画像を一括ダウンロード・リスト表示できます",
     "version": "1.0.0",
 
     "browser_action": {
@@ -11,8 +11,18 @@
         "default_popup": "popup.html"
     },
 
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "js": [ "js/contentScript.js" ]
+        }
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
     "background": {
-        "scripts": ["js/eventPage.js"],
+        "scripts": [
+            "js/chrome-extension-async.js",
+            "js/eventPage.js"
+        ],
         "persistent": false
     },
 
@@ -22,5 +32,5 @@
         "128": "icon128.png"
     },
 
-    "permissions": []
+    "permissions": ["downloads","tabs"]
 }

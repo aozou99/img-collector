@@ -6,9 +6,10 @@
         "rootDir": "src",
         "outDir": "dist/js",
         "sourceMap": true,
+        "baseUrl": "./src",
         "jsx": "react",
         "lib": ["es2015", "dom"],
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true
-    }
+    },
 }

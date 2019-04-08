@@ -1,11 +1,5 @@
-// Listen to messages sent from other parts of the extension.
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  // onMessage must return "true" if response is async.
-  let isResponseAsync = false;
+import { MSGLISTENE_RMAP } from 'modules/constants/MsgListenerMap';
+import MessageListener from 'modules/wrapper/chrome/onMessage/MessageListener';
 
-  if (request.popupMounted) {
-    console.log('eventPage notified that Popup.tsx has mounted.');
-  }
-
-  return isResponseAsync;
-});
+// リスナー設定
+MessageListener.addAll(MSGLISTENE_RMAP.eventPage);

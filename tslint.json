@@ -3,10 +3,21 @@
     "extends": [
         "tslint:recommended",
         "tslint-config-prettier",
-        "tslint-config-airbnb",
         "tslint-react"
     ],
-    "jsRules": {},
-    "rules": {},
+    "linterOptions": {
+        "exclude": [
+            "src/chrome-extension-async.d.ts"
+        ]
+    },
+    "jsRules": {
+        "object-literal-sort-keys": false
+    },
+    "rules": {
+        "no-console": false,
+        "jsx-no-lambda": false,
+        "object-literal-sort-keys": false
+
+    },
     "rulesDirectory": []
 }

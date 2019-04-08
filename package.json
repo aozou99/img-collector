@@ -1,28 +1,30 @@
 {
-  "name": "chrome-extension-react-typescript-boilerplate",
+  "name": "img-collector",
   "version": "1.0.0",
-  "description": "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
+  "description": "現在開いているWepページで使用されている画像を一括ダウンロード・リスト表示できます",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
-    "watch": "webpack -w --config webpack.dev.js"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
+    "watch": "webpack -w --config webpack.dev.js",
+    "lint": "tslint -p tsconfig.json --fix"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "author": "Joe Martella",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "author": "aozou99",
   "license": "MIT",
   "devDependencies": {
     "@types/chrome": "0.0.60",
+    "@types/lodash": "^4.14.123",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "css-loader": "^0.28.11",
@@ -41,9 +43,16 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@types/node": "^11.13.0",
+    "chrome-extension-async": "^3.3.2",
+    "eslint": "^5.16.0",
+    "lodash": "^4.17.11",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "tslint": "^5.14.0",
-    "tslint-config-prettier": "^1.18.0"
+    "tslint-config-prettier": "^1.18.0",
+    "typeface-roboto": "^0.0.54"
   }
 }
