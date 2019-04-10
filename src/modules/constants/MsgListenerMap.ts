@@ -1,23 +1,25 @@
 import ImageUrlPicker from 'modules/picker/ImageUrlPicker';
-import DownloadManager from 'modules/wrapper/chrome/downloads/DownloadManager';
+import Downloader from 'modules/wrapper/chrome/downloads/Downloader';
+import ChromeStorage from 'modules/wrapper/chrome/storage/ChromeStorage';
 import * as url from 'url';
 import TriggerKeys from './TriggerKeys';
 import { IListenerMap } from './Types';
 
-export const MSGLISTENE_RMAP: { [script: string]: IListenerMap } = {
+export const MSGLISTENER_MAP: { [script: string]: IListenerMap } = {
   contentScript: {
     // 一括ダウンロード
-    [TriggerKeys.ON_ALL_DOWNLOADS]: () => {
+    [TriggerKeys.ON_ALL_DOWNLOADS]: async () => {
       const srcList = ImageUrlPicker.pickAllImg();
       chrome.runtime.sendMessage({ [TriggerKeys.ON_ALL_DOWNLOADS]: JSON.stringify(srcList) });
     },
   },
   eventPage: {
     // 一括ダウンロード
-    [TriggerKeys.ON_ALL_DOWNLOADS]: (request: any, sender: any) => {
+    [TriggerKeys.ON_ALL_DOWNLOADS]: async (request: any, sender: any) => {
+      const options = await ChromeStorage.getOptions();
       const srcList = JSON.parse(request[TriggerKeys.ON_ALL_DOWNLOADS]);
       if (Array.isArray(srcList) && srcList.length > 0) {
-        DownloadManager.downloadAll(srcList, url.parse(sender.url).hostname);
+        Downloader.downloadAll(srcList, url.parse(sender.url).hostname, options);
       }
     },
   },

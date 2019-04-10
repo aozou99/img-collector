@@ -113,6 +113,10 @@
   dependencies:
     "@types/filesystem" "*"
 
+"@types/classnames@^2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.7.tgz#fb68cc9be8487e6ea5b13700e759bfbab7e0fefd"
+
 "@types/filesystem@*":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/filesystem/-/filesystem-0.0.29.tgz#ee3748eb5be140dcf980c3bd35f11aec5f7a3748"
@@ -135,8 +139,8 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.123.tgz#39be5d211478c8dd3bdae98ee75bb7efe4abfe4d"
 
 "@types/node@^11.13.0":
-  version "11.13.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.0.tgz#b0df8d6ef9b5001b2be3a94d909ce3c29a80f9e1"
+  version "11.13.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.2.tgz#dc85dde46aa8740bb4aed54b8104250f8f849503"
 
 "@types/prop-types@*":
   version "15.7.0"
@@ -154,9 +158,16 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.0.40":
+"@types/react@*":
   version "16.8.10"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.10.tgz#1ccb6fde17f71a62ef055382ec68bdc379d4d8d9"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.0.40":
+  version "16.8.13"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.13.tgz#a82b15aad9ab91c40edca0d6889b7745ae24f053"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -2944,6 +2955,10 @@ mixin-object@^2.0.1:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -4856,6 +4871,10 @@ typedarray@^0.0.6:
 typeface-roboto@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.54.tgz#8f02c9a18d1cfa7f49381a6ff0d21ff061f38ad2"
+
+types@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/types/-/types-0.1.1.tgz#860c6859d11366293f835d8c95aebcf95029838e"
 
 typescript@^2.7.2:
   version "2.9.2"
