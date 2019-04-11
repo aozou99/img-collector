@@ -1,6 +1,6 @@
 # Image Collector (Chrome拡張機能)
 
-> 現在開いているWepページで使用されている画像を一括ダウンロード・リスト表示できます
+> 現在開いているWepページで使用されている画像を一括ダウンロードできます
 
 ## Development
 ### Building
