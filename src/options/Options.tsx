@@ -1,19 +1,15 @@
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
 import createStyles from '@material-ui/core/styles/createStyles';
 import withStyles, { StyleRules, WithStyles } from '@material-ui/core/styles/withStyles';
-import * as React from 'react';
-
-// withRoot を import
-import ChromeStorage from 'modules/wrapper/chrome/storage/ChromeStorage';
+// Components
 import SelectConflictAction from 'options/components/SelectConflictAction';
 import SelectSubDirectory from 'options/components/SelectSubDirectory';
-// Components
 import SwitchAutoDownload from 'options/components/SwitchAutoDownload';
 import TextSaveDirectory from 'options/components/TextSaveDirectory';
+import * as React from 'react';
 import withRoot from './withRoot';
 
 // styles を定義
-const styles = (theme: Theme): StyleRules =>
+const styles = (): StyleRules =>
   createStyles({
     root: {},
   });
