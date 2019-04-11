@@ -2,8 +2,9 @@
     "manifest_version": 2,
 
     "name": "Image Collector",
+    "short_name": "img-collector",
     "description":
-        "現在開いているWepページで使用されている画像を一括ダウンロード・リスト表示できます",
+        "現在開いているWepページで使用されている画像を一括ダウンロードできます",
     "version": "1.0.0",
     "browser_action": {
         "default_icon": "icon16.png"
