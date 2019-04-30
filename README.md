@@ -6,11 +6,12 @@
 
 ### ![icon16](https://user-images.githubusercontent.com/21310288/55963019-fa996d00-5cac-11e9-95f1-534583baccfd.png)アイコンをクリック 
 
-![demo1](https://user-images.githubusercontent.com/21310288/55962750-78a94400-5cac-11e9-8ace-f216d903d02a.gif)
+![demo2](https://user-images.githubusercontent.com/21310288/56000159-2e4fb380-5cfc-11e9-9459-a54e191295c6.gif)
+
 
 ## オプション
 ### ![icon16](https://user-images.githubusercontent.com/21310288/55963019-fa996d00-5cac-11e9-95f1-534583baccfd.png)アイコンを右クリック → オプションをクリック
-![option](https://user-images.githubusercontent.com/21310288/55963392-b35fac00-5cad-11e9-921e-2cec20a0972d.png)
+![option](https://user-images.githubusercontent.com/21310288/56001512-7cfd4d80-5cfc-11e9-945c-8e2c0a87818c.png)
 
 ### 下記の設定を行えます
 - 保存先ディレクトリ名
