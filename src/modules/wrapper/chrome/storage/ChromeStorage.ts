@@ -1,4 +1,4 @@
-const optionKeys = ['saveDirectory', 'subDirectory', 'autoDownload', 'conflictAction'];
+const optionKeys = ['saveDirectory', 'subDirectory', 'autoDownload', 'conflictAction', 'fileNamePattern'];
 export default class ChromeStorage {
   public static async getSync(
     keys: string | string[],
@@ -19,6 +19,7 @@ export default class ChromeStorage {
       subDirectory: op.subDirectory || 'domain',
       autoDownload: op.autoDownload || false,
       conflictAction: op.conflictAction || 'overwrite',
+      fileNamePattern: op.fileNamePattern || '.*',
     };
   }
 }

@@ -4,6 +4,7 @@ import withStyles, { StyleRules, WithStyles } from '@material-ui/core/styles/wit
 import SelectConflictAction from 'options/components/SelectConflictAction';
 import SelectSubDirectory from 'options/components/SelectSubDirectory';
 import SwitchAutoDownload from 'options/components/SwitchAutoDownload';
+import TextFileNamePattern from 'options/components/TextFileNamePattern';
 import TextSaveDirectory from 'options/components/TextSaveDirectory';
 import * as React from 'react';
 import withRoot from './withRoot';
@@ -27,6 +28,7 @@ const optionsComponent: React.FC<IProps> = ({ classes, options }: IProps) => {
       <SelectSubDirectory subDirectory={options.subDirectory} />
       <SwitchAutoDownload autoDownload={options.autoDownload} />
       <SelectConflictAction conflictAction={options.conflictAction} />
+      <TextFileNamePattern fileNamePattern={options.fileNamePattern} />
     </div>
   );
 };
